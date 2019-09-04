@@ -1,0 +1,142 @@
+.hide{
+  display: none;
+}
+.head {
+   width: 28vh;
+   position: absolute;
+   left: -2vh;
+   top: 1vh;
+}
+.eye {
+  width: 13vh;
+  position: absolute;
+  left: 8vh;
+  top: 13vh;
+}
+.shirt {
+  width: 13vh;
+  position: absolute;
+  left: 0.6vh;
+  top: 18vh;
+}
+.mouth {
+  width: 6vh;
+  position: absolute;
+  left: 11.6vh;
+  top: 20vh;
+}
+.torso {
+  width: 13vh;
+  position: absolute;
+  left: 0.6vh;
+  top: 18vh;
+}
+.left-thigh {
+  width: 6vh;
+  position: absolute;
+  left: 2.3vh;
+  top: 27vh;
+}
+.right-thigh {
+  width: 6vh;
+  position: absolute;
+  left: 5.4vh;
+  top: 27vh;
+}
+.cat-legs {
+  width: 10vh;
+  position: absolute;
+  left: 0.4vh;
+  top: 23vh;
+}
+.left-hand {
+  width: 4vh;
+  position: absolute;
+  left: 9.3vh;
+  top: 24vh;
+}
+.right-hand{
+  width: 4vh;
+  position: absolute;
+  left: 13.4vh;
+  top: 24vh;
+}
+.left-forearm {
+  width: 4vh;
+  position: absolute;
+  left: 7.3vh;
+  top: 25vh;
+}
+.right-forearm {
+  width: 4vh;  
+  position: absolute;
+  left: 11.4vh;
+  top: 25vh;
+}
+.left-upper-arm {
+  width: 6vh;
+  position: absolute;
+  left: 4.3vh;
+  top: 21vh;
+}
+.right-upper-arm {
+  width: 6vh;
+  position: absolute;
+  left: 8.4vh;
+  top: 21vh;
+}
+.left-leg {
+  width: 4vh;
+  position: absolute;
+  left: 3.3vh;
+  top: 32vh;
+}
+.right-leg {
+  width: 3.3vh;
+  position: absolute;
+  left: 7.3vh;
+  top: 32.6vh;
+}
+.left-feet {
+  width: 4vh;
+  position: absolute;
+  left: 3.3vh;
+  top: 35vh;
+}
+.right-feet {
+  width: 3.3vh;
+  position: absolute;
+  left: 7.3vh;
+  top: 35.3vh;
+}
+.zombie-name {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 5px 5px 5px rgba(0,0,0,0.2)
+}
+.zombie-details {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+.zombie-name {
+  font-weight: bold;
+}
+.checkImg{
+  width: 3vh;
+  left: 0.5vh;
+  top: 0.5vh;
+}
+
+.kittyImg{
+  left: -10vh;
+  top: 10vh;
+  width: 23vh;
+  height: 40vh;
+}

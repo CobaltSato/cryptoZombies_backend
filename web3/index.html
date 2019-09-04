@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/zombie.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./src/js/web3.min.js"></script>
+    <script src="./src/js/ethereumjs-tx-1.3.3.min.js"></script>
+    <script src="./src/js/abi.js"></script>
+
+    <title>CryptoZombies</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">CryptoZombies</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active" id="top">
+                        <a class="nav-link" href="./index.html"> Top Page <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item" id="battlePage">
+                        <a class="nav-link" href="./attack.html">Battle</a>
+                    </li>
+                    <li class="nav-item" id="feedKittiesPage">
+                        <a class="nav-link" href="./kitties.html">Feed Kitties</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="signUp">
+            <div class="card">
+                <div class="card-header">Create Zombie!</div>
+                <div class="card-body row">
+                    <div id="preview" class="col-sm-4" style="float:left; width: 500px;"></div>
+                    <div class="col-sm-4">
+                        <h4 id="dna"></h4>
+                        <h4 id="eyes"></h4>
+                        <h4 id="shirts"></h4>
+                        <h4 id="skinColor"></h4>
+                        <h4 id="eyesColor"></h4>
+                        <h4 id="clothesColor"></h4>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="名前を入力" aria-label="inputKey"
+                                    aria-describedby="basic-addon1" id="nameInput" value="">
+                            </div>
+                            <button type="button" name="button" id="btnCreateZombie"> Create Zombie </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card hide" id="yourZombies">
+            <div class="card-header"> Your Army</div>
+            <div class="card-body row" id="zombieList">
+                <div class="col-sm-4 hide" id="model">
+                    <div class="card" style="position: relative; height:40vh; width: 23vh">
+                        <img src="assets/zombies_image/left-feet.png" class="cloth card-img-top legs left-feet">
+                        <img src="assets/zombies_image/right-feet.png" class="cloth card-img-top legs right-feet">
+                        <img src="assets/zombies_image/left-leg.png" class="cloth card-img-top legs left-leg">
+                        <img src="assets/zombies_image/right-leg.png" class="cloth card-img-top legs right-leg">
+                        <img src="assets/zombies_image/left-thigh.png" class="cloth card-img-top legs left-thigh">
+                        <img src="assets/zombies_image/right-thigh.png" class="cloth card-img-top legs right-thigh">
+                        <img src="assets/zombies_image/left-forearm.png" class="skin card-img-top left-forearm">
+                        <img src="assets/zombies_image/right-forearm.png" class="skin card-img-top right-forearm">
+                        <img src="assets/zombies_image/right-upper-arm.png" class="skin card-img-top right-upper-arm">
+                        <img src="assets/zombies_image/torso.png" class="cloth card-img-top torso">
+                        <img src="assets/zombies_image/catlegs.png" class="cloth card-img-top cat-legs hide">
+                        <img src="assets/zombies_image/shirt-1.png" class="cloth card-img-top shirt shirt-part-1">
+                        <img src="assets/zombies_image/shirt-2.png" class="cloth card-img-top shirt shirt-part-2">
+                        <img src="assets/zombies_image/shirt-3.png" class="cloth card-img-top shirt shirt-part-3">
+                        <img src="assets/zombies_image/shirt-4.png" class="cloth card-img-top shirt shirt-part-4">
+                        <img src="assets/zombies_image/shirt-5.png" class="cloth card-img-top shirt shirt-part-5">
+                        <img src="assets/zombies_image/shirt-6.png" class="cloth card-img-top shirt shirt-part-6">
+                        <img src="assets/zombies_image/left-upper-arm.png" class="skin card-img-top left-upper-arm">
+                        <img src="assets/zombies_image/left-forearm.png" class="skin card-img-top left-forearm">
+                        <img src="assets/zombies_image/right-forearm.png" class="skin card-img-top right-forearm">
+                        <img src="assets/zombies_image/left-hand.png" class="skin card-img-top left-hand">
+                        <img src="assets/zombies_image/right-hand.png" class="skin card-img-top right-hand">
+                        <img src="assets/zombies_image/head-1.png" class="skin card-img-top head head-part-1">
+                        <img src="assets/zombies_image/head-2.png" class="skin card-img-top head head-part-2">
+                        <img src="assets/zombies_image/head-3.png" class="skin card-img-top head head-part-3">
+                        <img src="assets/zombies_image/head-4.png" class="skin card-img-top head head-part-4">
+                        <img src="assets/zombies_image/head-5.png" class="skin card-img-top head head-part-5">
+                        <img src="assets/zombies_image/head-6.png" class="skin card-img-top head head-part-6">
+                        <img src="assets/zombies_image/head-7.png" class="skin card-img-top head head-part-7">
+                        <img src="assets/zombies_image/eyes-1.png" class="eye eye-part-1">
+                        <img src="assets/zombies_image/eyes-2.png" class="eye eye-part-2">
+                        <img src="assets/zombies_image/eyes-3.png" class="eye eye-part-3">
+                        <img src="assets/zombies_image/eyes-4.png" class="eye eye-part-4">
+                        <img src="assets/zombies_image/eyes-5.png" class="eye eye-part-5">
+                        <img src="assets/zombies_image/eyes-6.png" class="eye eye-part-6">
+                        <img src="assets/zombies_image/eyes-7.png" class="eye eye-part-7">
+                        <img src="assets/zombies_image/eyes-8.png" class="card-img-top eye eye-part-8">
+                        <img src="assets/zombies_image/eyes-9.png" class="card-img-top eye eye-part-9">
+                        <img src="assets/zombies_image/eyes-10.png" class="card-img-top eye eye-part-10">
+                        <img src="assets/zombies_image/eyes-11.png" class="card-img-top eye eye-part-11">
+                        <img src="assets/zombies_image/mouth.png" class="card-img-top mouth">
+                        <img src="assets/check.png" class="card-img-top eye hide checkImg">
+                    </div>
+                    <textarea class="form-control zombieName" rows="4"
+                        style="width:20vh; margin-left: 1.5vh; margin-right: 1.5vh;" readonly></textarea>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <script src="./src/js/common.js"></script>
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>
