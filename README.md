@@ -1,15 +1,4 @@
-myCryptoZombies 
-====
-
-Overview
-
-## Description
-
-## Demo
-
-## Requirement
-
-## Usage
+CryptoZombies 
 
 ## Install
 cd truffle  
@@ -17,5 +6,3 @@ truffle migrate
 copy contract address  
 modify contractAddress in common.js  
 
-## Author
-Cobalt Sato
